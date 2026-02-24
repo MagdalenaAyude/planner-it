@@ -8,6 +8,8 @@ lo que permite mantener la información incluso al recargar la página.
 
 ## 🔗 Demo en vivo: 
 
+https://planner-it.netlify.app/
+
 --- 
 
 ## 🛠 Tecnologías utilizadas 
