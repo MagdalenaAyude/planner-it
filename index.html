@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Planificador con calendario y lista de tareas accesible">
+  <title>Planner IT | Gestor de Tareas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Planner IT</h1>
+    </div>
+  </header>
+
+  <main>
+    <section id="tareas" class="section">
+      <div class="container">
+        <h2>Tareas</h2>
+
+        <div class="task-input-container">
+          <input type="text" id="taskInput" placeholder="Nueva tarea">
+          <button id="btn-agregar-tarea" class="btn">Agregar</button>
+        </div>
+
+        <ul class="task-list"></ul>
+      </div>
+    </section>
+
+    <section id="calendario" class="section">
+      <div class="container">
+        <h2>Calendario</h2>
+
+        <div class="calendario-contenedor">
+          <div class="calendario-header">
+            <button id="mes-anterior" aria-label="Mes anterior">&#9664;</button>
+            <h3 id="mes-actual"></h3>
+            <button id="mes-siguiente" aria-label="Mes siguiente">&#9654;</button>
+          </div>
+          <div id="dias-calendario" class="dias-calendario"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Planner IT</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

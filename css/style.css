@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f1f5f9;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  background-color: #1f2937;
+  padding: 12px 0;
+  margin-bottom: 12px;
+}
+
+.logo {
+  color: #f1f5f9;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.task-input-container,
+.task-list {
+  max-width: 300px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.task-input-container {
+  display: flex;
+  gap: 10px;
+}
+
+#taskInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#taskInput:focus {
+  outline: none;
+  border-color: #1f2937;
+}
+
+.btn {
+  background-color: #1f2937;
+  color: #f1f5f9;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.task-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.task-list li {
+  background-color: #f1f5f9;
+  border: 1px solid #f1f5f9;
+  border-radius: 6px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.texto-tarea {
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+
+li.completada .texto-tarea {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.btn-eliminar {
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: none;
+  color: #8b0000;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-eliminar:hover {
+  color: #8b0000;
+}
+
+.calendario-contenedor {
+  background-color: #f1f5f9;
+  border: 1px solid #f1f5f9;
+  padding: 20px;
+  margin: 10px auto 0;
+  border-radius: 10px;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.calendario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.calendario-header button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.dias-calendario {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.dias-semana {
+  display: contents;
+  font-weight: 600;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.dia {
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.dia:hover {
+  background-color: #f1f5f9;
+}
+
+.hoy {
+  background-color: #1f2937;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.activo {
+  background-color: #64748b;
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
+.con-tareas::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #1f2937;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 13px;
+  color: #64748b;
+}
+
+@media (max-width: 600px) {
+  .calendario-contenedor {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
